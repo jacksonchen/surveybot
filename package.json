@@ -1,0 +1,16 @@
+{
+  "name": "troll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nightmare": "^2.0.7",
+    "semaphore": "^1.0.3",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
