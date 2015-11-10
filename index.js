@@ -1,14 +1,12 @@
 var Nightmare = require('nightmare');
-var sem = require('semaphore')(1);
+var sem = require('semaphore')(5);
 var counter = 1;
 var n = 10000; // Change iterations here
 
 var yolo = function(sem) {
   var nightmare = new Nightmare()
-  // .goto("https://docs.google.com/forms/d/1hzPRkrJnkwyF3wlqwwkVLQBWRFbeAZ9_Xch50wj1fbs/viewform")
-  // .click('span.ss-choice-item-control input[name="entry.1066004599"]')
     .goto("https://docs.google.com/forms/d/1kkBTU_DWRGD2fKkDPhKDxQEjPRIwjjFnmmF_NJf0LV8/viewform")
-    .click('span.ss-choice-item-control input[name="entry.1494608824"]')
+    .click('span.ss-choice-item-control input[id="group_1494608824_7"]')
     .click('input[type="submit"]')
     .run(function(err, nightmare) {
       if (err) return console.log(err);
@@ -18,9 +16,9 @@ var yolo = function(sem) {
         console.log("exiting")
         process.exit();
       }
-      setTimeout(function() {
+      // setTimeout(function() {
         sem.leave();
-      }, 50);
+      // }, 50);
     })
     .end();
 }
