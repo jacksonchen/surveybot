@@ -16,9 +16,9 @@ var yolo = function(sem) {
         console.log("exiting")
         process.exit();
       }
-      // setTimeout(function() {
+      setTimeout(function() {
         sem.leave();
-      // }, 50);
+      }, 50);
     })
     .end();
 }
