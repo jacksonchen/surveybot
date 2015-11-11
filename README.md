@@ -7,3 +7,9 @@ Bot for Google Surveys built with Node.js
 - Start the bot with `npm start`.
 
 Note that the bot will only run for 10000 iterations (default). You can change this if you would like.
+
+### Contributors
+Jackson Chen
+
+### License
+MIT License
