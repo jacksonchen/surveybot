@@ -18,7 +18,7 @@ var yolo = function(text, callback) {
       console.log("Submitted " + counter + " times!");
       counter = counter + 1;
       var delay = (Math.pow((Math.random() * 180000) + 1000, 2)/200000) + 1000;
-      console.log"Waiting " + delay + " ms to send again.");
+      console.log("Waiting " + delay + " ms to send again.");
       setTimeout(function() {
         callback();
       }, delay);
