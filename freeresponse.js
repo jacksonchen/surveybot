@@ -8,6 +8,8 @@ var counter = 1;
 
 var yolo = function(text, callback) {
   var nightmare = new Nightmare()
+    // .goto("https://docs.google.com/forms/d/108-02nRNhbeycU4MRjd3CeR5rNBVXvlZ0NLwZQBx-9M/viewform?usp=send_form")
+    // .type('textarea[name="entry.1342734250"]', text)
     .goto("https://docs.google.com/forms/d/1dhALobG0RMe7ESPSdpTVnfbccPxF1uQQkmvgsVbjkSI/viewform")
     .type('textarea[name="entry.300495425"]', text)
     .click('input[type="submit"]')
@@ -15,9 +17,11 @@ var yolo = function(text, callback) {
       if (err) return console.log(err);
       console.log("Submitted " + counter + " times!");
       counter = counter + 1;
+      var delay = (Math.pow((Math.random() * 180000) + 1000, 2)/200000) + 1000;
+      console.log"Waiting " + delay + " ms to send again.");
       setTimeout(function() {
         callback();
-      }, 50);
+      }, delay);
     })
     .end();
 }
